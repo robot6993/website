@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sidd!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            width: 600px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+
+        .header-left {
+            grid-column: 1;
+        }
+
+        .header-right {
+            grid-column: 2;
+        }
+
+        .profile-image {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .bio-info {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .warning {
+            font-weight: bold;
+        }
+
+        .interests {
+            margin-top: 15px;
+        }
+
+        .interests-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .interests-content {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .box {
+            border: 1px solid #000;
+            padding: 10px;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .box-title {
+            font-weight: bold;
+            font-size: 16px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        .emoji-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+        }
+
+        .emoji {
+            font-size: 20px;
+        }
+
+        .circles {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ddd;
+            overflow: hidden;
+        }
+
+        .friends-box {
+            grid-column: 1 / span 2;
+            border: 1px solid #000;
+            padding: 10px;
+            margin-top: 15px;
+        }
+
+        .footer {
+            grid-column: 1 / span 2;
+            text-align: center;
+            margin-top: 15px;
+            color: #777;
+            font-size: 12px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="card">
+        <!-- Left section with profile image and interests -->
+        <div class="header-left">
+            <img src="https://i.pinimg.com/736x/63/4f/57/634f578361e0aa12ea2b6828931dd7d5.jpg"
+                alt="Anime character profile" class="profile-image">
+
+            <div class="interests">
+                <div><strong>:]</strong> che</div>
+                <div><strong>>i was created to create</strong></div>
+
+                <div class="emoji-row">
+                    <span class="emoji"><img src="https://www.gifcen.com/wp-content/uploads/2023/07/berserk-gif-5.gif"
+                            alt="" width="250" height="90"></span>
+
+                </div>
+
+                <div><strong>yay</strong> </div>
+                <div><strong>no</strong> people that hate cats, peanuts, coffee ...</div>
+            </div>
+        </div>
+
+
+
+        <!-- Right section with bio info and rules -->
+        <div class="header-right">
+            <div class="name">sidd!</div>
+
+            <div class="bio-info">
+                he/ him <br><strong>twenty</strong><br>
+
+            </div>
+
+            <div class="bio-info">
+                <span class="warning">mu/sic </span> radiohead/ <br>
+                xxxtentacion <br>
+                cigrattes after sex
+            </div>
+
+            <div class="circles">
+                <div class="circle"><a href="https://x.com/us_vision86775"><img
+                            src="https://img.freepik.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg?t=st=1743844342~exp=1743847942~hmac=125a44fb19ccd27cfb68d450f3fdc52a97e839b45ecf6b938e568122252f0c3f&w=1480"
+                            alt="" width="40" height="40"></a></div>
+                <div class="circle"><a href="https://www.instagram.com/__psycho_._chan_/"><img
+                            src="https://cdn.pixabay.com/photo/2021/06/15/12/14/instagram-6338393_1280.png" width="40"
+                            height="40" alt=""></a>
+                </div>
+                <div class="circle"><a href="https://www.reddit.com/user/mr_robot__69/"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGv3ld4wUTTNJpvZoVI-tQJCsZ-nQjoD08nwMd8Zah8jlzUqloTYrr7TMxn0JgbvDRV8E&usqp=CAU"
+                            alt="" width="40" height="40">
+
+                    </a></div>
+            </div>
+
+            <div class="box">
+                <div class="box-title">who am i</div>
+
+                i'm a cs_undergrad
+            </div>
+
+            <div class="box">
+                <div class="box-title">intrested in!</div>
+
+                c/c++ <br>
+                operating systems <br>
+                graphics programming <br>
+
+                <strong>beginner</strong>
+            </div>
+        </div>
+
+        <!-- Friends section spanning both columns -->
+        <div class="friends-box">
+            <strong>Time:</strong> <u></u>
+            <div id="datetime"></div>
+            <script>
+                // Get current date and time
+                var now = new Date();
+                var datetime = now.toLocaleString();
+
+                // Insert date and time into HTML
+                document.getElementById("datetime").innerHTML = datetime;
+            </script>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">( Made by mewh )</div>
+    </div>
+</body>
+
+</html>
